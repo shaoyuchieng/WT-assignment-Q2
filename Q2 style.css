@@ -1,7 +1,76 @@
-/* ✅ 让菜单适配手机屏幕 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    width: 50%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* ✅ 让菜单项保持对齐 */
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ✅ 图片样式 */
+.menu-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.menu-item img:hover {
+    opacity: 0.8;
+}
+
+/* ✅ 文字部分 */
+.menu-text {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* ✅ 价格样式 */
+.price {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    white-space: nowrap;
+}
+
+/* ✅ 适配小屏幕（手机） */
 @media (max-width: 768px) {
     .menu-container {
-        width: 90%;
+        width: 95%; /* 手机屏幕占比变大 */
         padding: 15px;
     }
 
@@ -9,30 +78,30 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 5px;
+        padding: 12px 5px;
     }
 
     .menu-item img {
-        width: 60px;
+        width: 60px; /* 图片缩小 */
         height: 60px;
         margin-right: 10px;
     }
 
     .menu-text {
-        flex-grow: 1;
-        padding-left: 0;
-        margin-left: 10px;
-        text-align: left;
         font-size: 14px;
+        margin-left: 5px;
     }
 
     .price {
-        font-size: 16px;
+        font-size: 14px;
         margin-left: 10px;
     }
 
+    h1 {
+        font-size: 24px;
+    }
+
     h2 {
-        text-align: left;
         font-size: 18px;
     }
 }
