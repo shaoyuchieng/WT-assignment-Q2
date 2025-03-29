@@ -19,9 +19,9 @@ h2 {
 
 .menu-item {
     display: flex;
-    align-items: center; /* 确保其他内容保持居中 */
+    align-items: center; 
     justify-content: space-between;
-    padding: 15px 10px; /* 适当增加 padding 让线条对齐 */
+    padding: 15px 10px; 
     border-bottom: 1px solid #ddd;
 }
 
@@ -33,7 +33,7 @@ h2 {
     padding-left: 15px;
     cursor: pointer;
     position: relative;
-    top: -2px; /* 上移 10px，可以自己调整 */
+    top: -2px; 
 }
 
 
@@ -52,7 +52,6 @@ h2 {
     color: #333;
 }
 
-/* Image Popup */
 .popup {
     display: none;
     position: fixed;
@@ -66,11 +65,11 @@ h2 {
 }
 
 .popup img {
-    width: 90vw;  /* 在手机上，宽度设为屏幕宽度的 90% */
-    max-width: 500px; /* 最大宽度，防止在大屏幕上过大 */
-    height: auto; /* 让高度自动调整，保持比例 */
-    object-fit: contain; /* 确保图片不会被拉伸 */
-    border-radius: 10px; /* 圆角让图片更美观 */
+    width: 90vw;  
+    max-width: 500px; 
+    height: auto; 
+    object-fit: contain; 
+    border-radius: 10px; 
 }
 
 .close-btn {
@@ -84,30 +83,30 @@ h2 {
 
 @media (max-width: 768px) {
     .menu-container {
-        width: 90%; /* 让菜单在小屏幕上占据更多空间 */
+        width: 90%; 
     }
 
     .menu-item {
-        flex-direction: row; /* 保持横向排列 */
+        flex-direction: row; 
         align-items: center;
         justify-content: space-between;
         padding: 10px;
     }
 
     .menu-item img {
-        width: 60px; /* 适当缩小图片 */
+        width: 60px; 
         height: 60px;
         padding-left: 5px;
     }
 
     .menu-text {
         flex-grow: 1;
-        padding-left: 10px; /* 减小 padding，防止文字偏移 */
+        padding-left: 10px; 
         text-align: left;
         font-size: 14px;
     }
 
     .price {
-        font-size: 14px; /* 适当缩小价格字体 */
+        font-size: 14px; 
     }
 }
