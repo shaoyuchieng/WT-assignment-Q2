@@ -19,7 +19,6 @@ h2 {
 
 .menu-item {
     display: flex;
-    flex-wrap: wrap; 
     align-items: center; 
     justify-content: space-between;
     padding: 15px 10px; 
@@ -51,6 +50,8 @@ h2 {
 .price {
     font-weight: bold;
     color: #333;
+    min-width: 60px; /* 确保价格栏不会变窄 */
+    text-align: right;
 }
 
 .popup {
