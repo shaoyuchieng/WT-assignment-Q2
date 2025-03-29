@@ -17,6 +17,7 @@ h2 {
     text-align: left;
 }
 
+/* 默认使用 flex 布局 */
 .menu-item {
     display: flex;
     align-items: center; 
@@ -24,7 +25,6 @@ h2 {
     padding: 15px 10px; 
     border-bottom: 1px solid #ddd;
 }
-
 
 .menu-item img {
     width: 80px;
@@ -36,22 +36,28 @@ h2 {
     top: -2px; 
 }
 
-
 .menu-item img:hover {
     opacity: 0.8;
 }
 
+/* 让 menu-text 自动换行，并确保不会占满所有空间 */
 .menu-text {
     flex-grow: 1;
-    padding-left: 150px;
+    padding-left: 20px;
     text-align: left;
+    font-size: 16px;
+    white-space: normal; /* 允许换行 */
+    word-wrap: break-word; /* 长单词换行 */
+    max-width: 60%; /* 避免过长文本挤压价格 */
 }
 
+/* 确保 price 不会被压缩 */
 .price {
     font-weight: bold;
     color: #333;
-    min-width: 60px; /* 确保价格栏不会变窄 */
+    min-width: 70px; /* 保证价格不会变太小 */
     text-align: right;
+    white-space: nowrap; /* 避免换行 */
 }
 
 .popup {
@@ -83,6 +89,7 @@ h2 {
     cursor: pointer;
 }
 
+/* 竖屏优化 */
 @media (max-width: 768px) {
     .menu-container {
         width: 90%; 
@@ -110,5 +117,26 @@ h2 {
 
     .price {
         font-size: 14px; 
+    }
+}
+
+/* 横屏优化：使用 Grid 布局让内容更整齐 */
+@media (max-width: 1024px) and (orientation: landscape) {
+    .menu-item {
+        display: grid;
+        grid-template-columns: 80px auto 80px; /* 3 列：图片、文本、价格 */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu-text {
+        font-size: 16px;
+        max-width: 100%; /* 让文本占满中间部分 */
+    }
+
+    .price {
+        font-size: 16px;
+        text-align: right;
+        min-width: 80px; /* 确保价格不会被挤压 */
     }
 }
